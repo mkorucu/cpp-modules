@@ -6,21 +6,22 @@
 #    By: mkorucu <mkorucu@student.42istanbul.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/18 03:25:05 by mkorucu           #+#    #+#              #
-#    Updated: 2023/02/18 22:21:47 by mkorucu          ###   ########.fr        #
+#    Updated: 2023/02/18 22:32:31 by mkorucu          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp	contact.cpp	phoneBook.cpp
-OBJ	= $(SRC:.cpp=.o)
-CC	= g++
-RM	= rm -rf
-FLAGS	= -Wall -Werror -Wextra -std=c++98
+SRC = Phonebook.cpp Contact.cpp main.cpp
+OBJ = $(SRC:.cpp=.o)
+CC = g++
+RM = rm -f
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+
 NAME = phoneBook
 
-all : $(NAME)
+all: $(NAME)
 
-$(NAME): 	$(OBJ)
-			$(CC) $(FLAGS) $(OBJ) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	$(RM) $(OBJ)
@@ -28,6 +29,6 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-re:	fclean	$(NAME)
+re: fclean $(NAME)
 
 .PHONY: all clean fclean re

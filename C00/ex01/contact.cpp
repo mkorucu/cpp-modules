@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mkorucu <mkorucu@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 23:23:44 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/18 04:02:20 by mkorucu          ###   ########.fr       */
+/*   Updated: 2023/02/18 22:31:20 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.h"
+#include "PhoneBook.hpp"
 
 void    Contact::SetContact(int i)
 {

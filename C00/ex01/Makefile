@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+         #
+#    By: mkorucu <mkorucu@student.42istanbul.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/18 03:25:05 by mkorucu           #+#    #+#              #
-#    Updated: 2023/02/18 03:30:39 by mkorucu          ###   ########.fr        #
+#    Updated: 2023/02/18 22:21:47 by mkorucu          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRC = main.cpp	contact.cpp	phoneBook.cpp
 OBJ	= $(SRC:.cpp=.o)
 CC	= g++
 RM	= rm -rf
-FLAGS	=	-WAll -Werror -Wextra -std=c++98
+FLAGS	= -Wall -Werror -Wextra -std=c++98
 NAME = phoneBook
 
 all : $(NAME)

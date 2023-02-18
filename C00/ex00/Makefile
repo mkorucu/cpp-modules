@@ -6,7 +6,7 @@
 #    By: mkorucu <mkorucu@student.42istanbul.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/14 15:22:12 by mkorucu           #+#    #+#              #
-#    Updated: 2023/02/15 15:22:27 by mkorucu          ###   ########.fr        #
+#    Updated: 2023/02/18 22:13:14 by mkorucu          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,10 +24,12 @@ $(NAME):	$(OBJS)
 
 clean:
 		$(RM) $(OBJS)
-		@printf "ALL DONE\n"
+		@printf "ALL CLEANED\n"
 
-fclean:	clean
+fclean:	
+		$(RM) $(OBJS) 
 		$(RM) $(NAME)
+		@printf "ALL CLEANED\n"
 
 re:	fclean all
 .PHONY: all clean fclean re bonus

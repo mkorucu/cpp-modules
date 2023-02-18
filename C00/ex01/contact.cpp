@@ -6,34 +6,11 @@
 /*   By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 23:23:44 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/18 01:54:36 by mkorucu          ###   ########.fr       */
+/*   Updated: 2023/02/18 04:02:20 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.h"
-
-/*
-class Contact
-{
-    private:
-        string  FirstName;
-        string  LastName;
-        string  NickName;
-        string  DarkestSecret;
-        int     PhoneNumber;
-        int     Index;
-    public:
-        void    SetContact(string FN, string LN, string NN, string DS, int PN, int i);
-        void    ShowContact();
-        string  GetFirstName();
-        string  GetLastName();
-        string  GetNickName();
-        string  GetDarkestSecret();
-        int     GetPhoneNumber();
-        int     GetIndex();
-        string  showNames(string name);
-};
-*/
 
 void    Contact::SetContact(int i)
 {
@@ -57,12 +34,15 @@ void    Contact::SetContact(int i)
     Index = i;
 }
 
-void    Contact::ShowContact()
+void    Contact::ShowContacts()
 {
     cout <<"|         "<< Index + 1 << "|";
     Contact::DisplayString(FirstName);
+    cout <<"|";
     Contact::DisplayString(LastName);
+    cout <<"|";
     Contact::DisplayString(NickName);
+    cout <<"|";
     cout<<endl;
 }
 
@@ -81,7 +61,6 @@ void    Contact::DisplayString(string str)
         for (int i = 0; i < str.length(); i++)
             cout << str[i];
     }
-    cout <<"|";
 }
 string  Contact::GetFirstName()
 {
@@ -106,4 +85,13 @@ string  Contact::GetDarkestSecret()
 int Contact::GetIndex()
 {
     return (Index);
+}
+
+void    Contact::DisplayResult()
+{
+    cout<<"First Name: "<<FirstName<<endl;
+    cout <<"Last Name: "<<LastName<<endl;
+    cout <<"Nickname: "<<NickName<<endl;
+    cout <<"Darkest Secret: "<<DarkestSecret<<endl;
+    cout << "Phone Number: "<<PhoneNumber<<endl;
 }

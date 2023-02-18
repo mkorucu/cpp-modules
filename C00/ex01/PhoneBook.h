@@ -6,7 +6,7 @@
 /*   By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:11:15 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/18 01:35:07 by mkorucu          ###   ########.fr       */
+/*   Updated: 2023/02/18 03:57:42 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,10 @@ class Contact
         int     Index;
     public:
         void    SetContact(int i);
-        void    ShowContact();
+        void    ShowContacts();
+        void    DisplayResult();
         void    DisplayString(string str);
+        /* Get Functions */
         string  GetFirstName();
         string  GetLastName();
         string  GetNickName();

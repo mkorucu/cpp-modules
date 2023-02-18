@@ -1,33 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*   phoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 00:02:49 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/18 03:32:30 by mkorucu          ###   ########.fr       */
+/*   Updated: 2023/02/18 04:04:53 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.h"
-
-/*
-class PhoneBook
-{
-    private:
-        Contact contacts[8];
-        int     total;
-    public:
-        PhoneBook(int added);
-        void    AddContact();
-        void    ShowContacts();
-        int     GetIndex();
-        void    GetContact(int i);
-        void    updateIndex();
-        void    UpdateIndex(int i);
-};
-*/
 
 PhoneBook::PhoneBook(int added)
 {
@@ -66,22 +49,17 @@ void    PhoneBook::SearchContacts()
     for (int i = 0; i < total && i < 8; i++)
     {
         cout << "|----------|----------|----------|----------|" << endl;
-        contacts[i].ShowContact();
+        contacts[i].ShowContacts();
     }
     cout << " ------------------------------------------- " << endl;
     cout << "enter index of the contact to be displayed: ";
     cin >> input;
+    cout << input;
+    sleep(1);
     if (input - 1 < total && input <= 8 && input > 0)
     {
-        cout << " ___________________________________________ "<< endl;
-        cout << "|     Index|First Name| Last Name|  Nickname|"<< endl;
-        cout << "|----------|----------|----------|----------|" << endl;
-        contacts[input - 1].ShowContact();
-        cout << " ------------------------------------------- " << endl;
+        contacts[input - 1].DisplayResult();
     }
     else
-    {
         cout << "index is out of range.." << endl;
-        //sleep(1);
-    }
 }

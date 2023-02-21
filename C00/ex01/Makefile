@@ -6,7 +6,7 @@
 #    By: mkorucu <mkorucu@student.42istanbul.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/18 03:25:05 by mkorucu           #+#    #+#              #
-#    Updated: 2023/02/18 22:58:44 by mkorucu          ###   ########.fr        #
+#    Updated: 2023/02/21 09:18:28 by mkorucu          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,12 +15,13 @@ OBJ	= $(SRC:.cpp=.o)
 CC	= g++
 RM	= rm -rf
 FLAGS	=	-WAll -Werror -Wextra -std=c++98
-NAME = phoneBook
+NAME = book
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(CPPFLAGS) $(SRC) -o $(NAME)
+	@printf "$(_SUCCESS) $(GREEN)- Executable ready.\n$(RESET)"
 
 clean:
 	$(RM) $(OBJ)

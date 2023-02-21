@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mkorucu <mkorucu@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:11:15 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/18 03:57:42 by mkorucu          ###   ########.fr       */
+/*   Updated: 2023/02/21 09:21:19 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Contact
         string  LastName;
         string  NickName;
         string  DarkestSecret;
-        int     PhoneNumber;
+        string  PhoneNumber;
         int     Index;
     public:
         void    SetContact(int i);
@@ -49,8 +49,8 @@ class PhoneBook
         int     total;
     public:
         PhoneBook(int added);
-        void    AddContact();
-        void    SearchContacts();
+        void    addContact();
+        void    searchContacts();
         int     GetIndex();
         void    GetContact(int i);
         void    updateIndex();

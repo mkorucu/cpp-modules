@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mkorucu <mkorucu@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 23:30:28 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/18 01:26:33 by mkorucu          ###   ########.fr       */
+/*   Updated: 2023/02/21 09:16:38 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,21 @@
 
 int main(void)
 {
-    char        *input;
+    string      input;
     PhoneBook   book(0);
     
     cout<< "Welcome tocrappy awesome phonebook software!"<<endl;
-    while(1)
+    while(!input.compare("EXIT"))
     {
         cout<<"Please type a command listed below:"<<endl;
         cout << "1. ADD\n2. SEARCH\n3. EXIT"<<endl;
         cin >> input;
-        if (!strcmp(input, "ADD"))
-            book.AddContact();
-        else if (!strcmp(input, "SEARCH"))
-            book.SearchContacts();
-        else if (!strcmp(input, "EXIT"))
-            break;
+        if (!input.compare("ADD"))
+            book.addContact();
+        else if (input.compare("SEARCH"))
+            book.searchContacts();
         else
-        {
             cout <<"irrelevant input!!"<<endl;
-            sleep(1);
-        }
     }
     return (0);
 }

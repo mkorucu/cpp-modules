@@ -6,7 +6,7 @@
 /*   By: mkorucu <mkorucu@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 13:30:28 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/15 15:44:32 by mkorucu          ###   ########.fr       */
+/*   Updated: 2023/02/21 09:51:02 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ int main(int ac, char **av)
 		while (av[i][++j])
 			cout << ft_to_upper(&av[i][j]);
 	}
+	cout << endl;
 	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mkorucu <mkorucu@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 23:23:44 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/18 04:02:20 by mkorucu          ###   ########.fr       */
+/*   Updated: 2023/02/21 09:21:06 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 void    Contact::SetContact(int i)
 {
-    string  FN, LN, NN, DS;
-    int     PN;
+    string  FN, LN, NN, DS, PN;
     cout << "Type first name: ";
     cin >> FN;
     cout<< "Type last name: ";

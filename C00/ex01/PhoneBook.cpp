@@ -6,18 +6,18 @@
 /*   By: mkorucu <mkorucu@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 22:58:59 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/19 00:32:38 by mkorucu          ###   ########.fr       */
+/*   Updated: 2023/02/21 09:26:51 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "PhoneBook.hpp"
+#include "PhoneBook.h"
 
 PhoneBook::PhoneBook(int added)
 {
     total = added;
 }
-void    PhoneBook::AddContact()
+void    PhoneBook::addContact()
 {
     Contact person;
     person.SetContact(total % 8);
@@ -26,8 +26,7 @@ void    PhoneBook::AddContact()
     if (total <= 8)
         cout <<"\nContact added successfully! ["<<total<<"/8]"<<endl;
     else
-        cout <<"\n List is full! Oldest contact was deleted!"<<endl;
-    sleep(1);
+        cout <<"\n List is full! Oldest contact ("<< total % 8 <<". contact) was deleted!"<<endl;
 }
 
 int PhoneBook::GetIndex()
@@ -35,7 +34,7 @@ int PhoneBook::GetIndex()
     return ((total % 8) + 1);
 }
 
-void    PhoneBook::SearchContacts()
+void    PhoneBook::searchContacts()
 {
     int input;
 
@@ -55,8 +54,6 @@ void    PhoneBook::SearchContacts()
     cout << " ------------------------------------------- " << endl;
     cout << "enter index of the contact to be displayed: ";
     cin >> input;
-    cout << input;
-    sleep(1);
     if (input - 1 < total && input <= 8 && input > 0)
     {
         contacts[input - 1].DisplayResult();

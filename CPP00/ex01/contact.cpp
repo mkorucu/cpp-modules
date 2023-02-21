@@ -6,7 +6,7 @@
 /*   By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 23:23:44 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/21 13:34:37 by mkorucu          ###   ########.fr       */
+/*   Updated: 2023/02/21 14:47:38 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void    Contact::setContact(int i)
     std::cin >> PN;
     _firstName = FN;
     _lastName = LN;
-    _nickName = NN;
+    _nickName = NN; 
     _darkestSecret = DS;
     _phoneNumber = PN;
     _index = i;

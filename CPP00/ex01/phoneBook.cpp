@@ -6,7 +6,7 @@
 /*   By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 22:58:59 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/21 13:34:11 by mkorucu          ###   ########.fr       */
+/*   Updated: 2023/02/21 15:10:28 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,15 @@ phoneBook::phoneBook(int added)
 void    phoneBook::addContact()
 {
     contacts[total % 8].setContact(total % 8);
-    contacts[total & 8].showContacts();
-    total++;
+    contacts[total % 8].showContacts();
+    phoneBook::updateTotal(1);
     std::cout<<"Contact is being added.."<<std::endl;
     //sleep(1);
     if (total <= 8)
-        std::cout <<"\nContact is added successfully! ["<<total<<"/8]"<<std::endl;
+        std::cout <<"Contact is added successfully! ["<<total<<"/8]"<<std::endl;
     else
-        std::cout <<"\n List is full! Oldest contact ("<< 1 + (total % 8) <<": "<<contacts[total - 1 % 8].getFirstName()<<") was deleted!"<<std::endl;
-    sleep(1);
+        std::cout <<"List is full! Oldest contact was deleted!"<<std::endl;
+    //sleep(1);
 }
 
 void    phoneBook::updateTotal(int i)

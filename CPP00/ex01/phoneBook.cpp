@@ -6,12 +6,12 @@
 /*   By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 22:58:59 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/21 15:10:28 by mkorucu          ###   ########.fr       */
+/*   Updated: 2023/02/21 15:29:18 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "phoneBook.h"
+#include "phoneBook.hpp"
 
 phoneBook::phoneBook(int added)
 {
@@ -20,15 +20,14 @@ phoneBook::phoneBook(int added)
 void    phoneBook::addContact()
 {
     contacts[total % 8].setContact(total % 8);
-    contacts[total % 8].showContacts();
     phoneBook::updateTotal(1);
-    std::cout<<"Contact is being added.."<<std::endl;
-    //sleep(1);
+    std::cout<< BLU <<"Contact is being added.."<< RST <<std::endl;
+    sleep(1);
     if (total <= 8)
-        std::cout <<"Contact is added successfully! ["<<total<<"/8]"<<std::endl;
+        std::cout << GRN <<"Contact is added successfully! ["<<total<<"/8]"<< RST <<std::endl;
     else
-        std::cout <<"List is full! Oldest contact was deleted!"<<std::endl;
-    //sleep(1);
+        std::cout << YEL << "List is full! Oldest contact was deleted!"<< RST << std::endl;
+    sleep(1);
 }
 
 void    phoneBook::updateTotal(int i)
@@ -43,11 +42,11 @@ int phoneBook::getIndex()
 
 void    phoneBook::displayContacts()
 {
-    std::cout<<"listing contacts.."<<std::endl;
+    std::cout<< BLU << "listing contacts.."<< RST << std::endl;
     sleep(1);
     if (total == 0)
     {
-        std::cout << "Nothing to Search, add some contacts!"<< std::endl;
+        std::cout << RED << "Nothing to Search, add some contacts!"<< RST << std::endl;
         sleep(1);
         return ;
     }
@@ -73,7 +72,7 @@ void    phoneBook::searchContacts()
         std::cin >> input;
         if (input - 1 < total && input <= 8 && input != 0 && std::cin.good())
         {
-            std::cout<<"Downloading the contact information.."<<std::endl;
+            std::cout<< BLU << "Downloading the contact information.." << RST << std::endl;
             sleep(1);
             contacts[input - 1].displayResult();
             checker = true;
@@ -82,7 +81,7 @@ void    phoneBook::searchContacts()
         {
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "Invalid input! Please re-enter.." << std::endl;
+            std::cout << RED <<"Invalid input! Please re-enter.." << RST << std::endl;
         } 
     } while (!checker);
 }

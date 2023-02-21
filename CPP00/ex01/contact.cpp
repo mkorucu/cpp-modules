@@ -6,11 +6,11 @@
 /*   By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 23:23:44 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/21 14:47:38 by mkorucu          ###   ########.fr       */
+/*   Updated: 2023/02/21 15:16:30 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phoneBook.h"
+#include "phoneBook.hpp"
 
 void    Contact::setContact(int i)
 {
@@ -35,7 +35,7 @@ void    Contact::setContact(int i)
 
 void    Contact::showContacts()
 {
-    std::cout <<"|         "<< _index + 1 << "|";
+    std::cout <<"|         "<< Contact::getIndex() + 1 << "|";
     Contact::displayString(Contact::getFirstName());
     std::cout <<"|";
     Contact::displayString(Contact::getLastName());

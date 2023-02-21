@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.h                                        :+:      :+:    :+:   */
+/*   phoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:11:15 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/21 13:34:37 by mkorucu          ###   ########.fr       */
+/*   Updated: 2023/02/21 15:25:31 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,30 +15,18 @@
 
 #include <iostream>
 #include <unistd.h>
+#include "contact.hpp"
 
-class Contact
-{
-    private:
-        std::string  _firstName;
-        std::string  _lastName;
-        std::string  _nickName;
-        std::string  _darkestSecret;
-        std::string  _phoneNumber;
-        int     _index;
-    public:
-        void    setContact(int i);
-        void    showContacts();
-        void    displayResult();
-        void    displayString(std::string str);
-        /* Get Functions */
-        std::string  getFirstName();
-        std::string  getLastName();
-        std::string  getNickName();
-        std::string  getDarkestSecret();
-        std::string  getPhoneNumber();
-        int     getIndex();
-        std::string  showNames(std::string name);
-};
+//Colors
+#define BLK "\e[0;30m"
+#define RED "\e[0;31m"
+#define GRN "\e[0;32m"
+#define YEL "\e[0;33m"
+#define BLU "\e[0;34m"
+#define MAG "\e[0;35m"
+#define CYN "\e[0;36m"
+#define WHT "\e[0;37m"
+#define RST "\e[0m"
 
 class phoneBook
 {

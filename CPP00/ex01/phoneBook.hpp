@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phoneBook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:11:15 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/21 15:25:31 by mkorucu          ###   ########.fr       */
+/*   Updated: 2023/02/21 16:01:12 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 #define PHONEBOOK_H
 
 #include <iostream>
-#include <unistd.h>
-#include "contact.hpp"
+#include "Contact.hpp"
 
 //Colors
 #define BLK "\e[0;30m"
@@ -28,13 +27,13 @@
 #define WHT "\e[0;37m"
 #define RST "\e[0m"
 
-class phoneBook
+class PhoneBook
 {
     private:
         Contact contacts[8];
         int     total;
     public:
-        phoneBook(int added);
+        PhoneBook(int added);
         void    addContact();
         void    displayContacts();
         void    searchContacts();

@@ -6,48 +6,42 @@
 /*   By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 22:58:59 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/21 15:29:18 by mkorucu          ###   ########.fr       */
+/*   Updated: 2023/02/21 16:03:27 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "phoneBook.hpp"
+#include "PhoneBook.hpp"
 
-phoneBook::phoneBook(int added)
+PhoneBook::PhoneBook(int added)
 {
     total = added;
 }
-void    phoneBook::addContact()
+void    PhoneBook::addContact()
 {
     contacts[total % 8].setContact(total % 8);
-    phoneBook::updateTotal(1);
-    std::cout<< BLU <<"Contact is being added.."<< RST <<std::endl;
-    sleep(1);
+    PhoneBook::updateTotal(1);
     if (total <= 8)
         std::cout << GRN <<"Contact is added successfully! ["<<total<<"/8]"<< RST <<std::endl;
     else
         std::cout << YEL << "List is full! Oldest contact was deleted!"<< RST << std::endl;
-    sleep(1);
 }
 
-void    phoneBook::updateTotal(int i)
+void    PhoneBook::updateTotal(int i)
 {
     total += i;
 }
 
-int phoneBook::getIndex()
+int PhoneBook::getIndex()
 {
     return ((total % 8) + 1);
 }
 
-void    phoneBook::displayContacts()
+void    PhoneBook::displayContacts()
 {
-    std::cout<< BLU << "listing contacts.."<< RST << std::endl;
-    sleep(1);
     if (total == 0)
     {
         std::cout << RED << "Nothing to Search, add some contacts!"<< RST << std::endl;
-        sleep(1);
         return ;
     }
     std::cout << " ___________________________________________ "<< std::endl;
@@ -58,10 +52,10 @@ void    phoneBook::displayContacts()
         contacts[i].showContacts();
     }
     std::cout << " ------------------------------------------- " << std::endl;
-    phoneBook::searchContacts();
+    PhoneBook::searchContacts();
 }
 
-void    phoneBook::searchContacts()
+void    PhoneBook::searchContacts()
 {
     int input = -1;
     bool checker = false;
@@ -72,8 +66,6 @@ void    phoneBook::searchContacts()
         std::cin >> input;
         if (input - 1 < total && input <= 8 && input != 0 && std::cin.good())
         {
-            std::cout<< BLU << "Downloading the contact information.." << RST << std::endl;
-            sleep(1);
             contacts[input - 1].displayResult();
             checker = true;
         }

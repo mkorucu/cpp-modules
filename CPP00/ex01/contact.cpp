@@ -6,11 +6,11 @@
 /*   By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 23:23:44 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/21 15:16:30 by mkorucu          ###   ########.fr       */
+/*   Updated: 2023/02/21 16:08:21 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phoneBook.hpp"
+#include "PhoneBook.hpp"
 
 void    Contact::setContact(int i)
 {
@@ -98,6 +98,6 @@ void    Contact::displayResult()
     std::cout <<"Last Name: \t"<<Contact::getLastName()<<std::endl;
     std::cout <<"Nickname: \t"<<Contact::getNickName()<<std::endl;
     std::cout <<"Darkest Secret: "<<Contact::getDarkestSecret()<<std::endl;
-    std::cout << "Phone Number: \tm"<<Contact::getPhoneNumber()<<std::endl;
+    std::cout << "Phone Number: \t"<<Contact::getPhoneNumber()<<std::endl;
     std::cout <<"---------------------------------------"<<std::endl;
 }

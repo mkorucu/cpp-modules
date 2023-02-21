@@ -12,25 +12,17 @@
 
 #include <iostream>
 
-char	ft_to_upper(char *str)
-{
-	if (*str >= 'a' && *str <= 'z')
-		return (*str - 32);
-	return (*str);
-}
-
 int main(int ac, char **av)
 {
 	int	i = 0, j;
 	
-	if (ac == 1)
+	if (ac < 2)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	while (ac > 1 && av[++i])
-	{
-		j = -1;
-		while (av[i][++j])
-			std::cout << ft_to_upper(&av[i][j]);
-	}
+    for (int i = 1; av[i]; i++)
+    {
+        for (int j = 0; av[i][j]; j++)
+            std::cout << (char)std::toupper(av[i][j]);
+    }
 	std::cout << std::endl;
 	return (0);
 }

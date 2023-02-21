@@ -6,18 +6,18 @@
 /*   By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 23:30:28 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/21 15:30:59 by mkorucu          ###   ########.fr       */
+/*   Updated: 2023/02/21 16:03:28 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phoneBook.hpp"
+#include "PhoneBook.hpp"
 
 int main(void)
 {
     std::string     input;
-    phoneBook       phoneBook(0);
+    PhoneBook       phoneBook(0);
     
-    std::cout<< GRN << "Welcome to crappy awesome phoneBook software!🥳🎉🍾" << RST << std::endl;
+    std::cout<< GRN << "WELCOME TO CRAPPY AWESOME PHONEBOOK SOFTWARE!🥳🎉🍾" << RST << std::endl;
     while(1)
     {
         std::cout<<"\n---------------Manual------------------"<<std::endl;

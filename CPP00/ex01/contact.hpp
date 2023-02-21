@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 15:16:32 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/21 15:17:04 by mkorucu          ###   ########.fr       */
+/*   Updated: 2023/02/21 16:13:00 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ class Contact
         std::string  getDarkestSecret();
         std::string  getPhoneNumber();
         int     getIndex();
-        std::string  showNames(std::string name);
 };
 
 #endif

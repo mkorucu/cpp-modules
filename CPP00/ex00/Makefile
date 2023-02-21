@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mkorucu <mkorucu@student.42istanbul.com    +#+  +:+       +#+         #
+#    By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/14 15:22:12 by mkorucu           #+#    #+#              #
-#    Updated: 2023/02/15 15:22:27 by mkorucu          ###   ########.fr        #
+#    Updated: 2023/02/21 14:55:59 by mkorucu          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,14 +20,15 @@ FLAGS	=	-Wall -Werror -Wextra -std=c++98
 all: $(NAME)
 
 $(NAME):	$(OBJS)
-			$(CC) $(FLAGS) $(OBJS) -o $(NAME)
+			@$(CC) $(FLAGS) $(OBJS) -o $(NAME)
+			@printf "Completed\n"
 
 clean:
-		$(RM) $(OBJS)
+		@$(RM) $(OBJS)
 		@printf "ALL DONE\n"
 
 fclean:	clean
-		$(RM) $(NAME)
+		@$(RM) $(NAME)
 
 re:	fclean all
 .PHONY: all clean fclean re bonus

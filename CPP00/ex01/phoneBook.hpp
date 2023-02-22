@@ -6,7 +6,7 @@
 /*   By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:11:15 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/21 16:01:12 by mkorucu          ###   ########.fr       */
+/*   Updated: 2023/02/22 09:56:23 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ class PhoneBook
         void    displayContacts();
         void    searchContacts();
         int     getIndex();
-        void    getContact(int i);
         void    updateTotal(int i);
 };
 #endif

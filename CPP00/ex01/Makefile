@@ -1,20 +1,8 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/18 03:25:05 by mkorucu           #+#    #+#              #
-#    Updated: 2023/02/21 16:03:27 by mkorucu          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-SRC = main.cpp	contact.cpp	phoneBook.cpp
+SRC = main.cpp	Contact.cpp	PhoneBook.cpp
 OBJ	= $(SRC:.cpp=.o)
-CC	= g++
+CXX	= c++
 RM	= rm -rf
-CPPFLAGS	=	-Wall -Werror -Wextra -std=c++98
+CXXFLAGS	=	-Wall -Werror -Wextra -std=c++98
 NAME = phoneBook
 
 #Colors:
@@ -28,15 +16,15 @@ CURSIVE		=	\e[33;3m
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CPPFLAGS) $(SRC) -o $(NAME)
-	@printf "$(_SUCCESS) $(GREEN)- Executable ready.\n$(RESET)"
+	$(CXX) $(CXXFLAGS) $(SRC) -o $(NAME)
+	#@printf "$(_SUCCESS) $(GREEN)- Executable ready.\n$(RESET)"
 
 clean:
-	@$(RM) $(OBJ)
-	@printf "$(YELLOW)    - Object files removed.$(RESET)\n"
+	$(RM) $(OBJ)
+	#@printf "$(YELLOW)    - Object files removed.$(RESET)\n"
 fclean: clean
-	@$(RM) $(NAME)
-	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
+	$(RM) $(NAME)
+	#@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
 
 re: fclean $(NAME)
 

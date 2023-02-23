@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mkorucu <mkorucu@student.42.fr>            +#+  +:+       +#+         #
+#    By: mkorucu <mkorucu@student.42istanbul.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/14 15:22:12 by mkorucu           #+#    #+#              #
-#    Updated: 2023/02/21 15:33:38 by mkorucu          ###   ########.fr        #
+#    Updated: 2023/02/23 15:34:37 by mkorucu          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	megaphone
 SRCS	=	megaphone.cpp
 OBJS	=	$(SRCS:.cpp=.o)
-CC		=	g++
+CC		=	c++
 RM		=	rm -f
 FLAGS	=	-Wall -Werror -Wextra -std=c++98
 
@@ -29,15 +29,15 @@ all: $(NAME)
 
 $(NAME):	$(OBJS)
 			@$(CC) $(FLAGS) $(OBJS) -o $(NAME)
-			@printf "$(_SUCCESS) $(GREEN)- Executable ready.\n$(RESET)"
+			@printf "$(_SUCCESS) $(YELLOW)- Executable ready.\n$(RESET)"
 
 clean:
 		@$(RM) $(OBJS)
-		@printf "$(YELLOW)    - Object files removed.$(RESET)\n"
+		@printf "$(GRAY)    - Object files removed.$(RESET)\n"
 
 fclean:	clean
 		@$(RM) $(NAME)
-		@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
+		@printf "$(GRAY)    - Executable removed.$(RESET)\n"
 
 re:	fclean all
 .PHONY: all clean fclean re bonus

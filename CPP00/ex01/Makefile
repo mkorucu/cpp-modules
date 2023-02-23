@@ -1,8 +1,8 @@
 SRC = main.cpp	Contact.cpp	PhoneBook.cpp
 OBJ	= $(SRC:.cpp=.o)
-CXX	= c++
+CPP	= c++
 RM	= rm -rf
-CXXFLAGS	=	-Wall -Werror -Wextra -std=c++98
+CPPFLAGS	=	-Wall -Werror -Wextra -std=c++98
 NAME = phoneBook
 
 #Colors:
@@ -16,8 +16,8 @@ CURSIVE		=	\e[33;3m
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) $(SRC) -o $(NAME)
-	@printf "$(_SUCCESS) $(GREEN)- Executable ready.\n$(RESET)"
+	$(CPP) $(CPPFLAGS) $(SRC) -o $(NAME)
+	@printf "$(GREEN)- Executable ready.\n$(RESET)"
 
 clean:
 	$(RM) $(OBJ)

@@ -17,14 +17,14 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) $(SRC) -o $(NAME)
-	#@printf "$(_SUCCESS) $(GREEN)- Executable ready.\n$(RESET)"
+	@printf "$(_SUCCESS) $(GREEN)- Executable ready.\n$(RESET)"
 
 clean:
 	$(RM) $(OBJ)
-	#@printf "$(YELLOW)    - Object files removed.$(RESET)\n"
+	@printf "$(YELLOW)    - Object files removed.$(RESET)\n"
 fclean: clean
 	$(RM) $(NAME)
-	#@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
+	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
 
 re: fclean $(NAME)
 

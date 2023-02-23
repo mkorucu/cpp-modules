@@ -1,16 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mkorucu <mkorucu@student.42istanbul.com    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/18 22:58:59 by mkorucu           #+#    #+#             */
-/*   Updated: 2023/02/23 15:45:16 by mkorucu          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-
 #include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook(int added)
@@ -57,23 +44,29 @@ void    PhoneBook::displayContacts()
 
 void    PhoneBook::searchContacts()
 {
-    int input = -1;
+    std::string input;
     bool checker = false;
-    
     do
     {
+        unsigned int i = 0;
         std::cout << "enter the index of the contact to be displayed: ";
         std::cin >> input;
-        if (input - 1 < total && input <= 8 && input != 0 && std::cin.good())
+        for (i = 0; i < input.length(); i++)
         {
-            contacts[input - 1].displayResult();
+            if (!isdigit(input[i]))
+                break ;
+        }
+        if (i < input.length() || input == "")
+        {
+            std::cout << RED <<"Invalid input! Please re-enter.." << RST << std::endl;
+            continue;
+        }
+        if (std::stoi(input) - 1 >= 0 && std::stoi(input) - 1 < total && std::stoi(input) <= 8)
+        {
+            contacts[std::stoi(input) - 1].displayResult();
             checker = true;
         }
         else
-        {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << RED <<"Invalid input! Please re-enter.." << RST << std::endl;
-        } 
     } while (!checker);
 }

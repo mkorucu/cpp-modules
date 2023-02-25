@@ -1,4 +1,4 @@
-SRC = main.cpp src/HumanA.cpp src/HumanB.cpp src/Weapon.cpp
+SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 OBJ = $(SRC:.cpp=.o)
 RM = rm -rf
 CC = c++

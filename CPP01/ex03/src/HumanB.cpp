@@ -1,12 +1,12 @@
 #include "../lib/HumanB.hpp"
 
-HumanB::HumanB(std::string _name)
+HumanB::HumanB(std::string _name) : weapon(NULL),  name(_name)
 {
-	this->name = _name;
+
 }
 HumanB::~HumanB(void)
 {
-	std::cout << "HumanB deconstructed" << std::endl;
+
 }
 
 void	HumanB::setWeapon(Weapon& _weapon)

@@ -17,7 +17,7 @@ all: $(NAME)
 
 $(NAME):	$(OBJS)
 			@$(CC) $(FLAGS) $(OBJS) -o $(NAME)
-			@printf "$(_SUCCESS) $(YELLOW)- Executable ready.\n$(RESET)"
+			@printf "$(YELLOW)- Executable ready.\n$(RESET)"
 
 clean:
 		@$(RM) $(OBJS)

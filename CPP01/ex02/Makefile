@@ -5,16 +5,27 @@ RM = rm -rf
 FLAGS = -Wall -Werror -Wextra -std=c++98
 NAME = brain
 
+#Colors:
+GREEN		=	\e[92;5;118m
+YELLOW		=	\e[93;5;226m
+GRAY		=	\e[33;2;37m
+RESET		=	\e[0m
+CURSIVE		=	\e[33;3m
+
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		$(CC) $(FLAGS) $(SRC) -o $(NAME)
+		@$(CC) $(FLAGS) $(SRC) -o $(NAME)
+		@printf "$(GREEN)- Executable ready.\n$(RESET)"
 
 clean:
-	$(RM) $(OBJ)
+		@$(RM) $(OBJ)
+		@printf	"$(YELLOW)- Object files removed.$(RESET)\n"
 
 fclean: clean
-	$(RM) $(NAME)
+		@$(RM) $(NAME)
+		@printf	"$(YELLOW)- Executable removed.$(RESET)\n"
 
 re: clean run
 

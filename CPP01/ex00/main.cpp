@@ -7,7 +7,6 @@ int	main()
 
 	std::cout << "randomChump() calling" << std::endl;
 	randomChump("Random");
-
 	std::cout << "New Zombie arises from dead on the stack" << std::endl;
 	std::cout << "name of the Zombie is: ";
 	std::cin >> name;

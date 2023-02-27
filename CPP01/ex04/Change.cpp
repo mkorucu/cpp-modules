@@ -1,11 +1,11 @@
-#include "Degis.hpp"
+#include "Change.hpp"
 
-Degis::Degis(std::string fileName) : 
+Change::Change(std::string fileName) : 
 	_in(fileName), _out(this->_in + ".replace"){};
 
-Degis::~Degis(void){};
+Change::~Change(void){};
 
-void	Degis::replace(std::string s1, std::string s2)
+void	Change::replace(std::string s1, std::string s2)
 {
 	std::ifstream	inFile(this->_in);
 

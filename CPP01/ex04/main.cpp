@@ -1,10 +1,10 @@
-#include "Degis.hpp"
+#include "Change.hpp"
 
 int main(int ac, char **av)
 {
 	if (ac == 4)
 	{
-		Degis	rplc(av[1]);
+		Change	rplc(av[1]);
 		rplc.replace(av[2], av[3]);
 		return (0);
 	}

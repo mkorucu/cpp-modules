@@ -1,4 +1,4 @@
-SRC = main.cpp Degis.cpp
+SRC = main.cpp Change.cpp
 OBJ = $(SRC:.cpp=.o)
 RM = rm -rf
 CC = c++

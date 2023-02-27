@@ -1,17 +1,17 @@
-#ifndef EKLE_HPP
-#define EKLE_HPP
+#ifndef CHANGE_HPP
+#define CHANGE_HPP
 
 #include <iostream>
 #include <fstream>
 
-class Degis
+class Change
 {
 	private:
 		std::string _in;
 		std::string	_out;
 	public:
-		Degis(std::string fileName);
-		~Degis(void);
+		Change(std::string fileName);
+		~Change(void);
 		void	replace(std::string s1, std::string s2);
 };
 #endif

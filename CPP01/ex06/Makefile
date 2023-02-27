@@ -3,7 +3,7 @@ OBJ = $(SRC:.cpp=.o)
 RM = rm -rf
 CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
-NAME = Harl
+NAME = harlFilter
 
 #colors
 GREEN		=	\e[92;5;118m

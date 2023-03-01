@@ -8,4 +8,5 @@ int	main(void)
 	for(int i = 0; i < n; i++)
 		zombieCrowd[i].announce();
 	delete [] zombieCrowd;
+	return (0);
 }

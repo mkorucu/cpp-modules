@@ -19,7 +19,7 @@ class Fixed
 		/* Public Member Functions */
 		int		getRawBits(void)	const;
 		void	setRawBits(int const raw);
-		friend std::ostream operator<< (std::ostream &output, Fixed const &sp);
+		friend std::ostream &operator<< (std::ostream &output, Fixed const &obj);
 		float	toFloat(void) const;
 		int		toInt(void) const;
 };

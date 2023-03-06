@@ -12,7 +12,8 @@ Fixed::Fixed(const Fixed &copied)	/*Const because we do not want to change the c
 	std::cout << "Copy constructor called" << std::endl;
 	if (this != &copied)
 		operator=(copied);
-	this->setRawBits(copied.getRawBits());
+	else
+		this->setRawBits(copied.getRawBits());
 } 
 Fixed&	Fixed::operator=(const Fixed &copied)
 {

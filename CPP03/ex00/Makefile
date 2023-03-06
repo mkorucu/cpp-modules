@@ -1,9 +1,9 @@
-SRC = Fixed.cpp main.cpp
+NAME = clash
+SRC	= main.cpp ClapTrap.cpp 
 OBJ = $(SRC:.cpp=.o)
-CC =c++
-FLAGS =  -Wall -Werror -Wextra -std=c++98
 RM = rm -rf
-NAME = ex02
+CC = c++
+FLAGS = -Wall -Werror -Wextra
 
 #colors
 GREEN		=	\e[92;5;118m
@@ -12,11 +12,11 @@ GRAY		=	\e[33;2;37m
 RESET		=	\e[0m
 CURSIVE		=	\e[33;3m
 
-all: $(NAME)
+all:		$(NAME)
 
 $(NAME):	$(OBJ)
 			@$(CC) $(FLAGS) $(SRC) -o $(NAME)
-			@printf	"$(GREEN) - Executed$(RESET)\n"
+			@printf "$(GREEN) - Executed$(RESET)\n"
 
 clean:
 			@$(RM) $(OBJ)
@@ -28,7 +28,3 @@ fclean:		clean
 
 re:			fclean all
 
-.PHONY:		all clean fclean re
-
-run:		all
-			./$(NAME)

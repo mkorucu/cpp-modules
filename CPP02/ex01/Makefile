@@ -3,7 +3,7 @@ OBJ = $(SRC:.cpp=.o)
 CC =c++
 FLAGS =  -Wall -Werror -Wextra -std=c++98
 RM = rm -rf
-NAME = ex00
+NAME = ex01
 
 #colors
 GREEN		=	\e[92;5;118m

@@ -2,7 +2,6 @@
 
 int main( void )
 {
-    fprintf(stderr,"error1\n");
     ScavTrap a("ali");
     ScavTrap b( a );
 

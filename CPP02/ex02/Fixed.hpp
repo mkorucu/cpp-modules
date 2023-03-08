@@ -11,10 +11,10 @@ class Fixed
 		static const int bits = 8;
 	public:
 		Fixed();
-		Fixed(const int num);
-		Fixed(const float num);
-		Fixed(const Fixed &copied);
-		Fixed &operator= (const Fixed &call);
+		Fixed(const int );
+		Fixed(const float );
+		Fixed(const Fixed &);
+		Fixed &operator= (const Fixed &);
 		~Fixed();
 		/* 			Public Member Functions			*/
 		int		getRawBits(void)	const;
@@ -27,22 +27,22 @@ class Fixed
 		Fixed	&operator--(); //overloading pre-decrement operator
 		Fixed	operator--(int); //overloading post-decrement operator
 		/*			Comperation Operators			*/
-		bool	operator<(const Fixed &obj) const; //overloading less than operator
-		bool	operator>(const Fixed &obj) const; //Overloading greater than operator
-		bool	operator<=(const Fixed &obj) const; //Overloading less than or equal to operator
-		bool	operator>=(const Fixed &obj) const; //Overloading greater than or equal to operator
-		bool	operator==(const Fixed &obj) const; //Overloading equality operator
-		bool	operator!=(const Fixed &obj) const; //Overloading inequality operator
+		bool	operator<(const Fixed &) const; //overloading less than operator
+		bool	operator>(const Fixed &) const; //Overloading greater than operator
+		bool	operator<=(const Fixed &) const; //Overloading less than or equal to operator
+		bool	operator>=(const Fixed &) const; //Overloading greater than or equal to operator
+		bool	operator==(const Fixed &) const; //Overloading equality operator
+		bool	operator!=(const Fixed &) const; //Overloading inequality operator
 		/*			Arithmetic Operators			*/
-		Fixed	operator+(const Fixed &obj) const; //Overloading summation operator
-		Fixed	operator-(const Fixed &obj) const; //Overloading substraction operator
-		Fixed	operator*(const Fixed &obj) const; //Overloading multiplication operator
-		Fixed	operator/(const Fixed &obj) const; //Overloading division operator
+		Fixed	operator+(const Fixed &) const; //Overloading summation operator
+		Fixed	operator-(const Fixed &) const; //Overloading substraction operator
+		Fixed	operator*(const Fixed &) const; //Overloading multiplication operator
+		Fixed	operator/(const Fixed &) const; //Overloading division operator
 		/*			Static functions				*/
-		static Fixed		&min(Fixed &obj1,Fixed &obj2);
-		static const Fixed	&min(const Fixed &obj1, const Fixed &obj2);
-		static Fixed		&max(Fixed &obj1,Fixed &obj2);
-		static const Fixed	&max(const Fixed &obj1, const Fixed &obj2);
+		static Fixed		&min(Fixed &,Fixed &);
+		static const Fixed	&min(const Fixed &, const Fixed &);
+		static Fixed		&max(Fixed &,Fixed &);
+		static const Fixed	&max(const Fixed &, const Fixed &);
 };
 
 	std::ostream & operator<<(std::ostream &output, Fixed const &obj);

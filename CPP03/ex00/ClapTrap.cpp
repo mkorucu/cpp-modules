@@ -14,3 +14,8 @@ ClapTrap::ClapTrap(const ClapTrap &cpy): name(cpy.name), hitPoint(cpy.hitPoint),
 {
     std::cout <<  "ClapTrap " << name << " constructed fron copy constructor." << std::endl;
 }
+
+void    ClapTrap::attack(const std::string &target)
+{
+    
+}

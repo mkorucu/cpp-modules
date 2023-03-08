@@ -1,4 +1,4 @@
-NAME = clash
+NAME = ex00
 SRC	= main.cpp ClapTrap.cpp 
 OBJ = $(SRC:.cpp=.o)
 RM = rm -rf

@@ -3,6 +3,14 @@
 
 #include "ScavTrap.hpp"
 
-#endif
-
 class FragTrap : public ScavTrap
+{
+public:
+	FragTrap();
+	FragTrap(std::string name);
+	~FragTrap();
+
+	void	highFivesGuys(void);
+};
+
+#endif

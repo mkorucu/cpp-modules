@@ -38,7 +38,7 @@ void    ScavTrap::attack(std::string const &target)
 {
     if (this->energyPoints > 0 && this->hitPoints > 0)
     {
-        std::cout << "\e[0;36mScavTrap\e[0m [ " << this->name << " ] attacks" << target << " at range, causing " << this->attackDamage << " points of damage !" << std::endl;
+        std::cout << "\e[0;36mScavTrap\e[0m [ " << this->name << " ] attacks " << target << " at range, causing " << this->attackDamage << " points of damage !" << std::endl;
         std::cout << "They have " << --this->energyPoints << " energy points remaining.." << std::endl;
     }
     else if (this->energyPoints <= 0)

@@ -1,4 +1,8 @@
 #include "ClapTrap.hpp"
+ClapTrap::ClapTrap()
+{
+	ClapTrap("Default");
+}
 
 ClapTrap::ClapTrap(std::string input): name(input) , hitPoints(10), energyPoints(10), attackDamage(0)
 {

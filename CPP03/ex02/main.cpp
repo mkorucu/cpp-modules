@@ -1,14 +1,14 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main( void )
 {
-    ScavTrap a("ali");
-    ScavTrap b( a );
+    FragTrap ash( "Ash" );
+    FragTrap ash2( ash );
 
-    a.attack( "ahmet" );
-    a.takeDamage( 10 );
-    a.beRepaired( 10 );
-    b.guardGate();
+    ash.attack( "the air" );
+    ash.takeDamage( 10 );
+    ash.beRepaired( 10 );
+    ash.highFivesGuys();
 
     return EXIT_SUCCESS;
 }

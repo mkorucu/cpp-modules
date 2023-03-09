@@ -1,16 +1,25 @@
 #include "ClapTrap.hpp"
 ClapTrap::ClapTrap()
 {
-	ClapTrap("Default");
+	this->name = "Default";
+	this->hitPoints = 10;
+	this->energyPoints = 10;
+	this->attackDamage = 0;
+	std::cout << "\e[0;32mClapTrap\e[0m [ Default ] constructed" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string input): name(input) , hitPoints(10), energyPoints(10), attackDamage(0)
+ClapTrap::ClapTrap(std::string input)
 {
+	this->name = input;
+	this->hitPoints = 10;
+	this->energyPoints = 10;
+	this->attackDamage = 0;
 	std::cout << "\e[0;32mClapTrap\e[0m [ " << name << " ] constructed" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap &cpy): name(cpy.name), hitPoints(10), energyPoints(10), attackDamage(10)
+ClapTrap::ClapTrap(const ClapTrap &cpy)
 {
+	*this = cpy;
 	std::cout <<  "\e[0;32mClapTrap\e[0m [ " << name << " ] constructed fron copy constructor." << std::endl;
 }
 

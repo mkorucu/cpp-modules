@@ -2,7 +2,7 @@
 
 ScavTrap::ScavTrap() : ClapTrap()
 {
-    ScavTrap("Default");
+    std::cout << "\e[0;36mScavTrap\e[0m [ Default ] is constructed" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name)
@@ -21,7 +21,7 @@ ScavTrap::~ScavTrap()
 ScavTrap::ScavTrap(const ScavTrap &cpy)
 {
     *this = cpy;
-    std::cout << "ScavTrap [ " << this->name << " ] has been copied with copy constuctor." << std::endl;
+    std::cout << "\e[0;36mScavTrap\e[0m [ " << this->name << " ] has been copied with copy constuctor." << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &cpy)
@@ -30,7 +30,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &cpy)
     this->energyPoints = cpy.energyPoints;
     this->hitPoints = cpy.hitPoints;
     this->attackDamage = cpy.attackDamage;
-    std::cout << "ScavTrap [ " << this->name << " ] has been copied with copy assignment operator." << std::endl;   
+    std::cout << "\e[0;36mScavTrap\e[0m [ " << this->name << " ] has been copied with copy assignment operator." << std::endl;   
     return *this;
 }
 

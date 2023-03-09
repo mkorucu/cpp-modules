@@ -4,12 +4,15 @@
 #include "ClapTrap.hpp"
 class ScavTrap : public ClapTrap
 {
-public:
+private:
     ScavTrap();
+
+public:
     ~ScavTrap();
-    ScavTrap(const ScavTrap &cpy);
-    ScavTrap &operator=(const ScavTrap &cpy);
-    ScavTrap(std::string name);    
+    ScavTrap(std::string name);
+    //ScavTrap(const ScavTrap &cpy); 
+    
+    //ScavTrap &operator=(const ScavTrap &cpy);
     void    attack(std::string const& target);
     void    guardGate();
 };

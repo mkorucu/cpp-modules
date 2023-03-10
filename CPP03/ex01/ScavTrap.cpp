@@ -10,18 +10,18 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name)
     this->hitPoints = 100;
     this->energyPoints = 50;
     this->attackDamage = 20;
-    std::cout << "\e[0;36mScavTrap\e[0m [ " << this->name << " ] is constructed" << std::endl;
+    std::cout << "\e[0;36mScavTrap\e[0m [ " << this->name << " ] is constructed." << std::endl;
 }
 
 ScavTrap::~ScavTrap()
 {
-    std::cout << "\e[0;36mScavTrap\e[0m [ " << this->name << " ] is destructed" << std::endl;
+    std::cout << "\e[0;36mScavTrap\e[0m [ " << this->name << " ] is destructed." << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &cpy) : ClapTrap(cpy)
 {
     *this = cpy;
-    std::cout << "ScavTrap [ " << this->name << " ] has been copied with copy constuctor." << std::endl;
+    std::cout << "\e[0;36mScavTrap\e[0m [ " << this->name << " ] has been copied with copy constuctor." << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &cpy)
@@ -30,7 +30,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &cpy)
     this->energyPoints = cpy.energyPoints;
     this->hitPoints = cpy.hitPoints;
     this->attackDamage = cpy.attackDamage;
-    std::cout << "ScavTrap [ " << this->name << " ] has been copied with copy assignment operator." << std::endl;   
+    std::cout << "\e[0;36mScavTrap\e[0m [ " << this->name << " ] has been copied with copy assignment operator." << std::endl;   
     return *this;
 }
 
@@ -48,5 +48,5 @@ void    ScavTrap::attack(std::string const &target)
 }
 void    ScavTrap::guardGate()
 {
-    std::cout << "\e[0;36mScavTrap\e[0m [ " << this->name << " ] is now in guardGate mode" << std::endl;
+    std::cout << "\e[0;36mScavTrap\e[0m [ " << this->name << " ] is now in guardGate mode." << std::endl;
 }

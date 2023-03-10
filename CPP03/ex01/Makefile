@@ -3,7 +3,7 @@ SRC	= main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJ = $(SRC:.cpp=.o)
 RM = rm -rf
 CC = c++
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra -std=c++98
 
 #colors
 GREEN		=	\e[92;5;118m

@@ -9,7 +9,7 @@ FragTrap::FragTrap()
 	std::cout << "\e[0;35mFragTrap\e[0m [ " << name << " ] constructed." << std::endl;
 }
 
-FragTrap::	FragTrap(std::string name) : ScavTrap(name)
+FragTrap::	FragTrap(std::string name) : ClapTrap(name)
 {
     this->hitPoints = 100;
     this->energyPoints = 100;
@@ -17,10 +17,23 @@ FragTrap::	FragTrap(std::string name) : ScavTrap(name)
 	std::cout << "\e[0;35mFragTrap\e[0m [ " << name << " ] constructed." << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap &cpy)
+FragTrap::FragTrap(const FragTrap &cpy) : ClapTrap(cpy)
 {
 	*this = cpy;
 	std::cout << "\e[0;35mFragTrap\e[0m [ " << name << " ] constructed from copy constructor." << std::endl;
+}
+
+FragTrap &FragTrap::operator=(const FragTrap &cpy)
+{
+	if (this != &cpy)
+	{
+		this->attackDamage =cpy.attackDamage;
+		this->energyPoints = cpy.energyPoints;
+		this->name = cpy.name;
+		this->hitPoints = cpy.hitPoints;
+	}
+	std::cout << "\e[0;35mFragTrap\e[0m [ " << this->name << " ] constructed from copy assignment." << std::endl;
+	return (*this);
 }
 
 FragTrap::~FragTrap()

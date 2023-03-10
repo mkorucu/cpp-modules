@@ -5,22 +5,23 @@ ClapTrap::ClapTrap()
 	this->hitPoints = 10;
 	this->energyPoints = 10;
 	this->attackDamage = 0;
-	std::cout << "\e[0;32mClapTrap\e[0m [ " << name << " ] constructed." << std::endl;
+	std::cout << "\e[0;32mClapTrap\e[0m [ " << name << " ] is constructed." << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string input)
+ClapTrap::ClapTrap(std::string input): name(input), hitPoints(10), energyPoints(10), attackDamage(0)
 {
-	this->name = input;
-	this->hitPoints = 10;
-	this->energyPoints = 10;
-	this->attackDamage = 0;
-	std::cout << "\e[0;32mClapTrap\e[0m [ " << name << " ] constructed." << std::endl;
+	std::cout << "\e[0;32mClapTrap\e[0m [ " << name << " ] is constructed." << std::endl;
+}
+
+ClapTrap::~ClapTrap()
+{
+	std::cout << "\e[0;32mClapTrap\e[0m [ " << this->name << " ] is destructed." << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &cpy)
 {
 	*this = cpy;
-	std::cout <<  "\e[0;32mClapTrap\e[0m [ " << name << " ] constructed fron copy constructor." << std::endl;
+	std::cout <<  "\e[0;32mClapTrap\e[0m [ " << name << " ] is constructed with copy constructor." << std::endl;
 }
 
 ClapTrap&   ClapTrap::operator=( const ClapTrap& cpy )
@@ -31,11 +32,6 @@ ClapTrap&   ClapTrap::operator=( const ClapTrap& cpy )
     this->attackDamage = cpy.attackDamage;
     std::cout << "\e[0;32mClapTrap\e[0m [ " << this->name << " ] has been copied with copy assignment operator." << std::endl;
     return *this;
-}
-
-ClapTrap::~ClapTrap()
-{
-	std::cout << "\e[0;32mClapTrap\e[0m [ " << this->name << " ] is destructed." << std::endl;
 }
 
 void    ClapTrap::attack(const std::string &target)

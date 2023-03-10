@@ -18,7 +18,7 @@ ScavTrap::~ScavTrap()
     std::cout << "\e[0;36mScavTrap\e[0m [ " << this->name << " ] is destructed" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &cpy)
+ScavTrap::ScavTrap(const ScavTrap &cpy) : ClapTrap(cpy)
 {
     *this = cpy;
     std::cout << "ScavTrap [ " << this->name << " ] has been copied with copy constuctor." << std::endl;

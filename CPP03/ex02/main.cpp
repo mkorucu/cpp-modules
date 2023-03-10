@@ -32,7 +32,6 @@
 int main( void )
 {
     FragTrap ash( "Ash" );
-	fprintf(stderr,"test2\n");
     FragTrap ash2( ash );
 
     ash.attack( "the air" );

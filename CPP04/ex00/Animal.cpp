@@ -23,14 +23,14 @@ Animal &Animal::operator=(const Animal &cpy)
 	return (*this);
 }
 
-void	Animal::makeSound()
+void	Animal::makeSound() const
 {
-	std::cout << "\e[0;32mAnimal\e[0m [ " << this->type << " ] makeSound called.";
+	std::cout << "\e[0;32mAnimal\e[0m [ " << this->type << " ] makeSound called." << std::endl;
 }
 
 Animal::~Animal()
 {
-	std::cout << "\e[0;32mAnimal\e[0m [ " << this->type << " ] is destructed.";
+	std::cout << "\e[0;32mAnimal\e[0m [ " << this->type << " ] is destructed." << std::endl;
 }
 
-std::string Animal::getType() {return this->type;}
+std::string Animal::getType() const {return this->type;}

@@ -28,7 +28,7 @@ void	Animal::makeSound()
 	std::cout << "\e[0;32mAnimal\e[0m [ " << this->type << " ] makeSound called.";
 }
 
-void	Animal::~Animal()
+Animal::~Animal()
 {
 	std::cout << "\e[0;32mAnimal\e[0m [ " << this->type << " ] is destructed.";
 }

@@ -1,23 +1,32 @@
-NAME = ex00
-SRC = main.cpp Cat.cpp Animal.cpp Dog.cpp
-OBJ = $(OBJ:.pp=.o)
-CC = c++ -std=+98
-FLAGS = -Wall -Werror -Wextra
+NAME = ex01
+SRC	= main.cpp Dog.cpp Cat.cpp Animal.cpp
+OBJ = $(SRC:.cpp=.o)
 RM = rm -rf
+CC = c++
+FLAGS = -Wall -Werror -Wextra -std=c++98
 
-all: $(NAME)
+#colors
+GREEN		=	\e[92;5;118m
+YELLOW		=	\e[93;5;226m
+GRAY		=	\e[33;2;37m
+RESET		=	\e[0m
+CURSIVE		=	\e[33;3m
 
-$(NAME): $(CC) $(FLAGS) $(SRC) -o $(NAME)
+all:		$(NAME)
+
+$(NAME):	$(OBJ)
+			@$(CC) $(FLAGS) $(SRC) -o $(NAME)
+			@printf "$(GREEN) - Executed$(RESET)\n"
 
 clean:
-		$(RM) $(OBJ)
+			@$(RM) $(OBJ)
+			@printf	"$(YELLOW) - Deleted Object Files $(RESET)\n"
 
-fclean:	clean
-		$(RM) $(NAME)
+fclean:		clean
+			@$(RM) $(NAME)
+			@printf	"$(YELLOW) - Deleted Program$(RESET)\n"
 
-re:	fclean all
+re:			fclean all
 
-run:	all
-		./$(NAME)
-
-.PHONY: clean fclean all re run
+run:		all
+			./$(NAME)

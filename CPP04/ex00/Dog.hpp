@@ -5,6 +5,10 @@
 
 class Dog : public Animal
 {
+public:
+    Dog();
+    ~Dog();
 
+    void    makeSound(void) const;
 };
 #endif

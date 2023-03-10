@@ -2,7 +2,11 @@
 
 ScavTrap::ScavTrap() : ClapTrap()
 {
-    std::cout << "\e[0;36mScavTrap\e[0m [ Default ] is constructed" << std::endl;
+    this->name = "Default ClapTrap";
+    this->hitPoints = 100;
+    this->energyPoints = 50;
+    this->attackDamage = 20;
+    std::cout << "\e[0;36mScavTrap\e[0m [ " << this->name << " ] is constructed." << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name)
@@ -10,12 +14,12 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name)
     this->hitPoints = 100;
     this->energyPoints = 50;
     this->attackDamage = 20;
-    std::cout << "\e[0;36mScavTrap\e[0m [ " << this->name << " ] is constructed" << std::endl;
+    std::cout << "\e[0;36mScavTrap\e[0m [ " << this->name << " ] is constructed." << std::endl;
 }
 
 ScavTrap::~ScavTrap()
 {
-    std::cout << "\e[0;36mScavTrap\e[0m [ " << this->name << " ] is destructed" << std::endl;
+    std::cout << "\e[0;36mScavTrap\e[0m [ " << this->name << " ] is destructed." << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &cpy)
@@ -48,5 +52,5 @@ void    ScavTrap::attack(std::string const &target)
 }
 void    ScavTrap::guardGate()
 {
-    std::cout << "\e[0;36mScavTrap\e[0m [ " << this->name << " ] is now in guardGate mode" << std::endl;
+    std::cout << "\e[0;36mScavTrap\e[0m [ " << this->name << " ] is now in guardGate mode." << std::endl;
 }

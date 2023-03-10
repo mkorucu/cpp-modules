@@ -1,11 +1,11 @@
 #include "ClapTrap.hpp"
 ClapTrap::ClapTrap()
 {
-	this->name = "Default";
+	this->name = "Default ClapTrap";
 	this->hitPoints = 10;
 	this->energyPoints = 10;
 	this->attackDamage = 0;
-	std::cout << "\e[0;32mClapTrap\e[0m [ Default ] constructed" << std::endl;
+	std::cout << "\e[0;32mClapTrap\e[0m [ " << name << " ] constructed." << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string input)
@@ -14,7 +14,7 @@ ClapTrap::ClapTrap(std::string input)
 	this->hitPoints = 10;
 	this->energyPoints = 10;
 	this->attackDamage = 0;
-	std::cout << "\e[0;32mClapTrap\e[0m [ " << name << " ] constructed" << std::endl;
+	std::cout << "\e[0;32mClapTrap\e[0m [ " << name << " ] constructed." << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &cpy)
@@ -35,7 +35,7 @@ ClapTrap&   ClapTrap::operator=( const ClapTrap& cpy )
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "\e[0;32mClapTrap\e[0m [ " << this->name << " ] has been destroyed!" << std::endl;
+	std::cout << "\e[0;32mClapTrap\e[0m [ " << this->name << " ] is destructed." << std::endl;
 }
 
 void    ClapTrap::attack(const std::string &target)
@@ -43,23 +43,23 @@ void    ClapTrap::attack(const std::string &target)
 	if (this->energyPoints > 0 && this->hitPoints > 0)
 	{
 		std::cout << "\e[0;32mClapTrap\e[0m [ " << this->name << " ] attacks " << target << ", causing " << this->attackDamage << " points of damage!" << std::endl;
-		std::cout << --this->energyPoints << " energy point remained" << std::endl;
+		std::cout << --this->energyPoints << " energy point remained." << std::endl;
 	}
 	else if (this->energyPoints <= 1)
 		std::cout << this->name << " has no energy point remaining to attack.." << std::endl;
 	else
-		std::cout << this->name << " can't throw their fists to his opponent 😵" << std::endl;
+		std::cout << this->name << " can't throw their fists to his opponent 😵." << std::endl;
 }
 void	ClapTrap::takeDamage(unsigned int amount)
 {
 	if (this->hitPoints > 0)
 	{
-		std::cout << "\e[0;32mClapTrap\e[0m [ " << this->name << " ] takes damage of " << amount << " from their oponent" << std::endl;
+		std::cout << "\e[0;32mClapTrap\e[0m [ " << this->name << " ] takes damage of " << amount << " from their opponent." << std::endl;
 		this->hitPoints -= amount;
 		if (this->hitPoints <= 0)
-			std::cout << "\e[0;32mClapTrap\e[0m [ " << this->name << " ] is dead 😵😵😵" << std::endl;
+			std::cout << "\e[0;32mClapTrap\e[0m [ " << this->name << " ] is dead 😵😵😵." << std::endl;
 		else
-			std::cout << this->hitPoints << " hit point remaining" << std::endl;
+			std::cout << this->hitPoints << " hit point remaining." << std::endl;
 	}
 	else
 		std::cout << "hes dead af..😵" << std::endl;
@@ -73,7 +73,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		std::cout << "\e[0;32mClapTrap\e[0m [ " << this->name << " ] is healed from " << this->hitPoints - amount << " to " <<this->hitPoints << std::endl;
 	}
 	else if (this->energyPoints <= 0)
-		std::cout << "\e[0;32mClapTrap\e[0m [ " << this->name << " ] has no energy point to heal theirself" << std::endl;
+		std::cout << "\e[0;32mClapTrap\e[0m [ " << this->name << " ] has no energy point to heal theirself." << std::endl;
 	else
 		std::cout << "hes dead af..😵" << std::endl;
 }

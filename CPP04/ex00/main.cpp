@@ -11,8 +11,8 @@ int main( void )
     const Animal* karabas = new Dog();
     const Animal* tekir = new Cat();
 
-    std::cout << "karabas Type: " << karabas->getType() << " " << std::endl;
-    std::cout << "tekir Type: " << tekir->getType() << " " << std::endl;
+    std::cout << "Cat Type: " << karabas->getType() << " " << std::endl;
+    std::cout << "Dog Type: " << tekir->getType() << " " << std::endl;
     tekir->makeSound();
     karabas->makeSound();
     meta->makeSound();

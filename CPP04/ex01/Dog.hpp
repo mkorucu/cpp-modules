@@ -6,10 +6,12 @@
 class Dog : public Animal
 {
 private:
-    Brain* set;
+    Brain* dogBrain;
     
 public:
     Dog();
+    Dog(const Dog&);
+    Dog& operator=(const Dog &);
     ~Dog();
 
     void    makeSound(void) const;

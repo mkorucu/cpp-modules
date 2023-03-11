@@ -12,5 +12,5 @@ Cat::~Cat()
 
 void    Cat::makeSound() const
 {
-    std::cout << "Meow!" << std::endl;
+    std::cout << "\e[0;36mCat\e[0m [ " << this->type << " ] Hav!" << std::endl;
 }

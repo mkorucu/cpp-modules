@@ -24,8 +24,8 @@ Cat& Cat::operator=(const Cat& cpy)
 
 Cat::~Cat()
 {
-    std::cout << "\e[0;36mCat\e[0m [ " << this->type << " ] is destructed." << std::endl;
     delete this->catbrain;
+    std::cout << "\e[0;36mCat\e[0m [ " << this->type << " ] is destructed." << std::endl;
 }
 
 void    Cat::makeSound() const

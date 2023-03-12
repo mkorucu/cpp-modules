@@ -1,4 +1,4 @@
-NAME = ex01
+NAME = ex02
 SRC	= main.cpp Dog.cpp Cat.cpp Animal.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 OBJ = $(SRC:.cpp=.o)
 RM = rm -rf

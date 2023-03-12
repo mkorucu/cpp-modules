@@ -7,8 +7,8 @@ Dog::Dog(): Animal("Dog")
 }
 Dog::~Dog()
 {
-    std::cout << "\e[0;35mDog\e[0m [ " << this->type << " ] is destructed." << std::endl;
     delete this->dogBrain;
+    std::cout << "\e[0;35mDog\e[0m [ " << this->type << " ] is destructed." << std::endl;
 }
 
 Dog::Dog(const Dog &cpy)

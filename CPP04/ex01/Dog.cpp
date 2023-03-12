@@ -2,11 +2,13 @@
 Dog::Dog(): Animal("Dog")
 {
 	std::cout << "\e[0;35mDog\e[0m [ " << this->type << " ] is constructed." << std::endl;
+    this->dogBrain = new Brain();
 
 }
 Dog::~Dog()
 {
     std::cout << "\e[0;35mDog\e[0m [ " << this->type << " ] is destructed." << std::endl;
+    delete this->dogBrain;
 }
 
 Dog::Dog(const Dog &cpy)
